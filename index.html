@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Prem Arvinth G | Video editor, 3D artist, photographer</title>
+  <meta name="description" content="Prem Arvinth G is a video editor, Blender 3D artist and photographer in Chennai, editing YouTube videos and Instagram reels for creators.">
+  <meta name="theme-color" content="#0E1719">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prem Arvinth G | Video editor">
+  <meta property="og:description" content="YouTube edits, Instagram reels, Blender 3D and photography.">
+  <meta property="og:image" content="https://prem-arvinth-g.github.io/editing-portfolio/assets/og.jpg">
+  <meta property="og:url" content="https://prem-arvinth-g.github.io/editing-portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/photos/temple-lake.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement, seen = false;
+      d.classList.add('js');
+      try { seen = sessionStorage.getItem('leaderSeen') === '1'; } catch (e) {}
+      if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('leader-on');
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#youtube">Skip to the work</a>
+
+  <!-- Film leader countdown, shown once per visit -->
+  <div class="leader" id="leader" aria-hidden="true">
+    <div class="leader-ring"><span class="leader-num">3</span></div>
+    <button class="leader-skip" type="button" tabindex="-1">Skip</button>
+  </div>
+
+  <header class="topbar">
+    <a class="mark" href="#intro" aria-label="Prem Arvinth G, back to top">
+      <span class="mark-glyph" aria-hidden="true">[ ]</span>
+      <span>Prem Arvinth G</span>
+    </a>
+    <nav class="toplinks" aria-label="Sections">
+      <a href="#youtube">YouTube</a>
+      <a href="#reels">Reels</a>
+      <a href="#blender">3D</a>
+      <a href="#photos">Photos</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn-solid btn-sm" href="#contact">Hire me</a>
+  </header>
+
+  <main>
+    <!-- HERO: program monitor -->
+    <section class="hero" id="intro" data-clip="Intro" data-color="var(--c-intro)">
+      <div class="monitor" id="monitor">
+        <div class="monitor-stage" id="stage"></div>
+        <div class="monitor-safe" aria-hidden="true"></div>
+        <div class="monitor-hud" aria-hidden="true">
+          <span class="hud-tl"><span class="hud-dot"></span>PGM</span>
+          <span class="hud-tr" id="heroTc">00:00:00:00</span>
+          <span class="hud-bl" id="heroClip">A001_C001</span>
+          <span class="hud-br">25 fps</span>
+        </div>
+        <h1 class="hero-name" aria-label="Prem Arvinth G">
+          <span class="line"><span>Prem</span></span>
+          <span class="line"><span>Arvinth&nbsp;G</span></span>
+        </h1>
+        <button class="monitor-toggle" id="heroToggle" type="button" aria-pressed="false" aria-label="Pause the hero slideshow">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/><path class="i-play" d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="hero-foot">
+        <p class="hero-role">Video editor, 3D artist and photographer in Chennai. I cut YouTube videos and reels that keep people watching.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#youtube">Watch my edits</a>
+          <button class="btn btn-ghost" id="showreelBtn" type="button" hidden>Play showreel</button>
+          <a class="btn btn-ghost" href="#contact">Work with me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUTUBE -->
+    <section class="sec" id="youtube" data-clip="YouTube" data-color="var(--c-yt)">
+      <header class="sec-head">
+        <h2>YouTube edits</h2>
+        <p>Recipe videos I edit for <a id="ytChannel" href="#" target="_blank" rel="noopener">Ramya Veetu Samayal</a>, a Tamil cooking channel. Tight pacing, clean cuts, and food that looks as good as it tastes.</p>
+        <span class="sec-tc" data-tc-for="youtube" aria-hidden="true"></span>
+      </header>
+      <div class="yt-grid" id="ytGrid"></div>
+    </section>
+
+    <!-- REELS -->
+    <section class="sec" id="reels" data-clip="Reels" data-color="var(--c-reels)">
+      <header class="sec-head">
+        <h2>Reels</h2>
+        <p>Short-form edits for my own page and for creator clients. Tap any reel to play it.</p>
+        <span class="sec-tc" data-tc-for="reels" aria-hidden="true"></span>
+      </header>
+      <div class="reel-tabs" role="tablist" aria-label="Reel collections">
+        <button role="tab" id="tab-mine" aria-controls="rail-mine" aria-selected="true" type="button">My page <span class="count" id="countMine"></span></button>
+        <button role="tab" id="tab-client" aria-controls="rail-client" aria-selected="false" tabindex="-1" type="button">Client edits <span class="count" id="countClient"></span></button>
+        <a class="reel-handle" id="reelHandle" href="#" target="_blank" rel="noopener"></a>
+      </div>
+      <div class="rail-wrap">
+        <div class="rail" id="rail-mine" role="tabpanel" aria-labelledby="tab-mine" tabindex="0"></div>
+        <div class="rail" id="rail-client" role="tabpanel" aria-labelledby="tab-client" tabindex="0" hidden></div>
+        <div class="rail-nav">
+          <button type="button" class="rail-btn" data-dir="-1" aria-label="Previous reels"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="rail-btn" data-dir="1" aria-label="Next reels"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D -->
+    <section class="sec" id="blender" data-clip="3D" data-color="var(--c-3d)">
+      <header class="sec-head">
+        <h2>Blender 3D</h2>
+        <p>Models, scenes and animation I build in Blender and post on <a id="blenderHandle" href="#" target="_blank" rel="noopener">@jk_editz_3d_47</a>.</p>
+        <span class="sec-tc" data-tc-for="blender" aria-hidden="true"></span>
+      </header>
+      <div class="rail rail-3d" id="rail-3d" tabindex="0" aria-label="Blender posts"></div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="sec" id="photos" data-clip="Photos" data-color="var(--c-photo)">
+      <header class="sec-head">
+        <h2>Photographs</h2>
+        <p>Storm skies, paddy fields at sunrise, temples and the neighbourhood cats, graded in Lightroom. Open any photo to see it full size.</p>
+        <span class="sec-tc" data-tc-for="photos" aria-hidden="true"></span>
+      </header>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="sec about" id="about" data-clip="About" data-color="var(--c-about)">
+      <figure class="about-photo">
+        <img src="assets/profile.jpg" alt="Prem Arvinth G in profile, looking out over a valley" width="640" height="640" loading="lazy">
+      </figure>
+      <div class="about-body">
+        <h2>The editor behind the cuts</h2>
+        <p>I'm Prem, a video editor, Blender artist and photographer from Chennai. I edit YouTube videos and reels for social media creators, build 3D scenes in Blender, and shoot whatever the sky is doing that evening.</p>
+        <p>I trained as an ECE engineer and work as a full-stack .NET developer, so I bring a technical eye to timing, structure and detail. Editing is where that logic turns into story.</p>
+
+        <div class="stack">
+          <div class="stack-col">
+            <h3>Video editing</h3>
+            <ul><li>Premiere Pro</li><li>After Effects</li><li>DaVinci Resolve</li><li>CapCut</li></ul>
+          </div>
+          <div class="stack-col">
+            <h3>3D</h3>
+            <ul><li>Blender</li><li>Modelling</li><li>Animation</li><li>Texturing</li></ul>
+          </div>
+          <div class="stack-col">
+            <h3>Photography</h3>
+            <ul><li>Lightroom</li><li>Photoshop</li><li>Colour grading</li></ul>
+          </div>
+        </div>
+
+        <h3 class="exp-title">Who I edit for</h3>
+        <ul class="exp">
+          <li><strong>Ramya Veetu Samayal</strong><span>YouTube cooking channel. Full recipe videos.</span></li>
+          <li><strong>@iam_abhinivesh</strong><span>Instagram creator. Reels and short-form content.</span></li>
+          <li><strong>@jk_editz_47 and @jk_editz_3d_47</strong><span>My own pages for edits and Blender work.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec contact" id="contact" data-clip="Contact" data-color="var(--c-contact)">
+      <h2 class="contact-title">Got footage? Let's cut it.</h2>
+      <p class="contact-lede">Send me your raw clips, a reference you like, and your deadline. I reply within a day.</p>
+      <a class="contact-mail" id="mailLink" href="#"></a>
+      <div class="contact-links">
+        <a class="btn btn-solid" id="waLink" href="#" target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a class="btn btn-ghost" id="telLink" href="#"></a>
+        <a class="btn btn-ghost" id="igLink" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" id="liLink" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Prem Arvinth G</p>
+    <p><a id="ghLink" href="#" target="_blank" rel="noopener">GitHub</a> <a id="devLink" href="#" target="_blank" rel="noopener">My developer portfolio</a></p>
+  </footer>
+
+  <!-- TIMELINE: scroll position is the playhead -->
+  <nav class="timeline" id="timeline" aria-label="Page timeline">
+    <div class="tl-tc">
+      <span class="tl-time" id="tlTime">00:00:00:00</span>
+      <span class="tl-clip" id="tlClip">Intro</span>
+    </div>
+    <div class="tl-body" id="tlBody">
+      <div class="tl-ruler" aria-hidden="true"></div>
+      <div class="tl-track tl-v1" id="tlV1"></div>
+      <div class="tl-track tl-a1" aria-hidden="true"><svg id="tlWave" preserveAspectRatio="none"></svg></div>
+      <div class="tl-playhead" id="tlPlayhead" aria-hidden="true"><span></span></div>
+    </div>
+    <p class="tl-hint" aria-hidden="true">Drag to scrub.<br>J and L jump.</p>
+  </nav>
+
+  <!-- Lightbox for videos, reels and photos -->
+  <dialog class="lightbox" id="lightbox" aria-label="Media viewer" tabindex="-1">
+    <div class="lb-frame" id="lbFrame"></div>
+    <p class="lb-caption" id="lbCaption"></p>
+    <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
