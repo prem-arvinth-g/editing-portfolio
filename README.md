@@ -40,6 +40,9 @@ button appears in the hero.
 **A photo:** resize to 1800 px on the long side (JPEG quality ~80), save it in `assets/photos/`,
 save a 760 px copy in `assets/photos/thumbs/`, and add an entry to `photos` in `js/data.js`.
 
+After changing `css/style.css`, `js/data.js` or `js/main.js`, bump the `?v=` number on their
+links in `index.html` so visitors' browsers fetch the new files together.
+
 ## Run locally
 
 ```bash
