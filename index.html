@@ -95,17 +95,12 @@
     <section class="sec" id="reels" data-clip="Reels" data-color="var(--c-reels)">
       <header class="sec-head">
         <h2>Reels</h2>
-        <p>Short-form edits for my own page and for creator clients. Tap any reel to play it.</p>
+        <p>Short-form edits for doctors, creators and my own page. Tap any reel to play it.</p>
         <span class="sec-tc" data-tc-for="reels" aria-hidden="true"></span>
       </header>
-      <div class="reel-tabs" role="tablist" aria-label="Reel collections">
-        <button role="tab" id="tab-mine" aria-controls="rail-mine" aria-selected="true" type="button">My page <span class="count" id="countMine"></span></button>
-        <button role="tab" id="tab-client" aria-controls="rail-client" aria-selected="false" tabindex="-1" type="button">Client edits <span class="count" id="countClient"></span></button>
-        <a class="reel-handle" id="reelHandle" href="#" target="_blank" rel="noopener"></a>
-      </div>
+      <div class="reel-tabs" id="reelTabs" role="tablist" aria-label="Reel collections"></div>
+      <p class="reel-note" id="reelNote"></p>
       <div class="rail-wrap">
-        <div class="rail" id="rail-mine" role="tabpanel" aria-labelledby="tab-mine" tabindex="0"></div>
-        <div class="rail" id="rail-client" role="tabpanel" aria-labelledby="tab-client" tabindex="0" hidden></div>
         <div class="rail-nav">
           <button type="button" class="rail-btn" data-dir="-1" aria-label="Previous reels"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
           <button type="button" class="rail-btn" data-dir="1" aria-label="Next reels"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -160,6 +155,7 @@
 
         <h3 class="exp-title">Who I edit for</h3>
         <ul class="exp">
+          <li><strong>@balaji_noble</strong><span>Health awareness reels. Captions, B-roll and medical graphics.</span></li>
           <li><strong>Ramya Veetu Samayal</strong><span>YouTube cooking channel. Full recipe videos.</span></li>
           <li><strong>@iam_abhinivesh</strong><span>Instagram creator. Reels and short-form content.</span></li>
           <li><strong>@jk_editz_47 and @jk_editz_3d_47</strong><span>My own pages for edits and Blender work.</span></li>

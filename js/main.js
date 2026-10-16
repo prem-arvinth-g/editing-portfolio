@@ -320,16 +320,23 @@
   }
 
   function initReels() {
-    const { mine, client } = S.reels;
-    buildRail($("#rail-mine"), mine, "Reel");
-    buildRail($("#rail-client"), client, "Client reel");
+    const groups = S.reels;
+    const tablist = $("#reelTabs");
+    const note = $("#reelNote");
+    const nav = $("#reels .rail-nav");
     buildRail($("#rail-3d"), S.blender, "Blender post");
-    $("#countMine").textContent = mine.ids.length;
-    $("#countClient").textContent = client.ids.length;
 
-    const tabs = [$("#tab-mine"), $("#tab-client")];
-    const groups = [mine, client];
-    const handle = $("#reelHandle");
+    const tabs = groups.map((g, k) => {
+      const rail = el("div", { class: "rail", id: `rail-${k}`, role: "tabpanel", "aria-labelledby": `tab-${k}`, tabindex: "0" });
+      buildRail(rail, g, g.itemLabel || "Reel");
+      nav.before(rail);
+      const tab = el("button", { role: "tab", id: `tab-${k}`, "aria-controls": `rail-${k}`, type: "button" }, [
+        document.createTextNode(`${g.label} `),
+        el("span", { class: "count", text: g.ids.length }),
+      ]);
+      tablist.append(tab);
+      return tab;
+    });
     let current = 0;
 
     function select(n, focus) {
@@ -338,10 +345,13 @@
         const on = k === n;
         t.setAttribute("aria-selected", String(on));
         t.tabIndex = on ? 0 : -1;
-        $("#" + t.getAttribute("aria-controls")).hidden = !on;
+        $(`#rail-${k}`).hidden = !on;
       });
-      handle.href = groups[n].url;
-      handle.textContent = `See all on ${groups[n].handle}`;
+      const g = groups[n];
+      note.replaceChildren(
+        document.createTextNode(`${g.note} `),
+        el("a", { href: g.url, target: "_blank", rel: "noopener", text: `See all on ${g.handle}` }),
+      );
       if (focus) tabs[n].focus();
     }
     tabs.forEach((t, k) => {

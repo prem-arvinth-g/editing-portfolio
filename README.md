@@ -29,9 +29,10 @@ Videos are never stored in the repo; they play from YouTube and Instagram.
 **A YouTube video:** add `{ id: "VIDEO_ID", title: "Title" }` to `youtube.videos` in `js/data.js`.
 Thumbnails and scrub frames come from YouTube automatically.
 
-**An Instagram reel:** add its ID (the part after `/reel/` or `/p/`) to the right list in
-`js/data.js`, then save a 720×1280 cover as `assets/reels/<ID>.jpg`. You can get the cover from
-`https://www.instagram.com/p/<ID>/media/?size=l`.
+**An Instagram reel:** add its ID (the part after `/reel/` or `/p/`) to the right group in
+`reels` in `js/data.js`, then save a 720×1280 cover as `assets/reels/<ID>.jpg`. You can get the cover
+from `https://www.instagram.com/p/<ID>/media/?size=l`. A new client gets a new group, which
+becomes a new tab in the Reels section.
 
 **A showreel:** paste the YouTube link into `showreel` in `js/data.js`. A "Play showreel"
 button appears in the hero.

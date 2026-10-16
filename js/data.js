@@ -27,24 +27,42 @@ window.SITE = {
     ],
   },
 
-  /* type: "p" for posts, "reel" for reels.
+  /* Each group is one tab in the Reels section, in this order.
+     type: "p" for posts, "reel" for reels.
      Each id needs a cover image at assets/reels/<id>.jpg (720x1280). */
-  reels: {
-    mine: {
-      handle: "@jk_editz_47",
-      url: "https://www.instagram.com/jk_editz_47/",
+  reels: [
+    {
+      label: "Health reels",
+      handle: "@balaji_noble",
+      url: "https://www.instagram.com/balaji_noble/",
+      note: "Health awareness reels: talking-head edits with bold captions, B-roll and medical graphics.",
+      itemLabel: "Health reel",
       type: "p",
-      ids: ["C-mzjsGJYJM", "C-afyv2JqOD", "C7tVuilp5fS", "C7ecF_cpi8k", "C7az4w_peCg", "C7CFHy1ra4T",
-            "C6jku-ZLAMZ", "C53HG3yrlQ3", "C5vS_uULrPm", "C4aO_sbLiN3", "C4SG4C5LSa6", "C3ei6NTLUVH"],
+      ids: ["Db0mdrrTLQV", "Db--6maz7Xo", "DcL3W58zCZ0", "DcQ--wmTlLy", "DcjDzASzzP0", "DcxqiInT9V_",
+            "Dc3jEREMeiz", "Dc_b_SHs0ZP", "DdHJb0fM9co", "DdTxc-_sAOb", "DdxuogCMK0h", "Dd0YrHKMjao",
+            "DeJAqORMmgD", "DeZhU7vM7vI", "DegclQ6MEzi"],
     },
-    client: {
+    {
+      label: "Creator reels",
       handle: "@iam_abhinivesh",
       url: "https://www.instagram.com/iam_abhinivesh/",
+      note: "Reels and short-form content for an Instagram creator.",
+      itemLabel: "Creator reel",
       type: "reel",
       ids: ["DE4bJ6ovpA7", "DE19ODgvif5", "DEuVyEjv-eF", "DEpNMP3vvub", "DEmzS--PsIO", "DEkB68cPj9a",
             "DEhaUwYvQfa", "DEe2PcRPvcx"],
     },
-  },
+    {
+      label: "My page",
+      handle: "@jk_editz_47",
+      url: "https://www.instagram.com/jk_editz_47/",
+      note: "Edits for my own page.",
+      itemLabel: "Reel",
+      type: "p",
+      ids: ["C-mzjsGJYJM", "C-afyv2JqOD", "C7tVuilp5fS", "C7ecF_cpi8k", "C7az4w_peCg", "C7CFHy1ra4T",
+            "C6jku-ZLAMZ", "C53HG3yrlQ3", "C5vS_uULrPm", "C4aO_sbLiN3", "C4SG4C5LSa6", "C3ei6NTLUVH"],
+    },
+  ],
 
   blender: {
     handle: "@jk_editz_3d_47",

@@ -539,12 +539,12 @@ p { margin: 0; }
   color: var(--sodium-ink);
 }
 .reel-tabs .count { font-family: var(--mono); font-size: .8rem; opacity: .75; margin-left: 4px; }
-.reel-handle {
-  margin-left: auto;
+.reel-note {
+  margin: -8px 0 20px;
   color: var(--muted);
-  font-size: .92rem;
-  text-underline-offset: 3px;
+  font-size: .95rem;
 }
+.reel-note a { color: var(--text); text-decoration-color: var(--clip); text-underline-offset: 3px; }
 
 .rail-wrap { position: relative; }
 .rail {
@@ -984,7 +984,6 @@ p { margin: 0; }
   .yt-title { font-size: .95rem; }
   .rail { grid-auto-columns: 72vw; gap: 14px; }
   .rail-3d { grid-auto-columns: 78vw; }
-  .reel-handle { margin-left: 0; width: 100%; }
   .gallery { columns: 2; column-gap: 8px; }
   .shot { margin-bottom: 8px; }
   .stack { grid-template-columns: 1fr 1fr; }
