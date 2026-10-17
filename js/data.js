@@ -1,7 +1,7 @@
-/* All site content lives here. Edit this file to add or change work. */
+﻿/* All site content lives here. Edit this file to add or change work. */
 window.SITE = {
   name: "Prem Arvinth G",
-  email: "premarvinthg@gmail.com",
+  email: "premarvinth.work@gmail.com",
   phone: "+91 63834 73936",
   whatsapp: "916383473936",
   links: {
