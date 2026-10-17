@@ -1,4 +1,4 @@
-﻿/* All site content lives here. Edit this file to add or change work. */
+/* All site content lives here. Edit this file to add or change work. */
 window.SITE = {
   name: "Prem Arvinth G",
   email: "premarvinth.work@gmail.com",
